@@ -1,0 +1,15 @@
+.card {
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.cardButton {
+    margin: 5px;
+}
+
+.header {
+    margin-top: 5px;
+}
+
