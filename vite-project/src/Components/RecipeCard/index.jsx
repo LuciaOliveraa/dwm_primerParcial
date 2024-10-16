@@ -13,7 +13,7 @@ export function RecipeCard({ id, name, type, image, deleteFunction }) {
     return (
         <div className={`${styles.card} card`} >
             <div className={`${styles.card} card-content`}>
-                <span> {image} </span>
+                <span className={styles.image}> {image} </span>
                 <p className={`${styles.header} header subtitle`} > Recipe: {name} </p>
                 <p> Food: {type} </p>
                 <button className={`${styles.cardButton} button`} label={"Details"} onClick={() => openDetails(id)}> Details </button>

@@ -25,7 +25,7 @@ export function Home({ recipes, postRecipe, deleteRecipe }) {
     return (
         <div className={`${styles.home}`}>
             {/* Header */}
-            <h1 className="title is-1"> Recipe </h1>
+            <h1 className="title is-1"> Recipes </h1>
             <div className={`${styles.buttonDiv}`}>
                 <SearchBar className={styles.searchBar} data={recipes} setFilteredRecipes={setFilteredRecipes}></SearchBar>
                 <Button label={"Add recipe"} onClick={openModal} />

@@ -44,7 +44,7 @@ export function RecipeDetails() {
     return (
         <div className={`${styles.divGameDetails} div-game-details`} >
             <Button className={"home-button"} label={"< Home"} onClick={backHome} />
-            <span> {recipe.image} </span>
+            <span className={styles.image}> {recipe.image} </span>
             <h2 className="title is-3"> {recipe.name} </h2>
             <span> {recipe.description} </span>
             <p> {recipe.preparation} </p>
