@@ -10,11 +10,12 @@ export function RecipeCard({ id, name, type, image, deleteFunction }) {
     const openDetails = ( id ) => {
         navigate(`/dishes/${id}`);
     }
+    
     return (
         <div className={`${styles.card} card`} >
             <div className={`${styles.card} card-content`}>
                 <span className={styles.image}> {image} </span>
-                <p className={`${styles.header} header subtitle`} > Recipe: {name} </p>
+                <p className={`${styles.header} header `} > Recipe: {name} </p>
                 <p> Food: {type} </p>
                 <button className={`${styles.cardButton} button`} label={"Details"} onClick={() => openDetails(id)}> Details </button>
                 <button className={`${styles.cardButton} button`} label={"Delete"} onClick={() => deleteFunction(id)}> Delete </button>

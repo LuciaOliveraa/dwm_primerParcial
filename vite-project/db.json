@@ -1,12 +1,8 @@
 {
   "dishes": [
     {
-      "id": "1",
-      "name": "Pizza Margherita",
-      "description": "Clásica pizza italiana con tomate, mozzarella y albahaca fresca.",
-      "type": "italiana",
-      "image": "🍕",
-      "preparation": "Extiende la masa, añade salsa de tomate, mozzarella y hornea."
+      "name": "pizza",
+      "id": "1"
     },
     {
       "id": "2",

@@ -54,10 +54,28 @@ function App() {
           },
         });
         setRecipes([...recipes.filter(recipe => recipe.id !== id)]);
-        //fetchRecipes();
       } catch (error) {
         console.log("Error fetching data: ", error);
       }
+  }
+
+  // Editing recipe.
+  async function editRecipe(recipe, id) {
+    try {
+      const url = `http://localhost:3000/dishes/${id}`
+      await fetch(url, { 
+        method: "PUT",
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body: JSON.stringify(recipe)
+      });
+      //const data = await response.json(); // extract JSON from response
+      setRecipes(recipes.map((r) => r.id == id ? recipe : r));
+      console.log("editing recipe",recipes)
+    } catch (error) {
+      console.log("Error fetching data: ", error);
+    }
   }
 
   return (
@@ -65,7 +83,7 @@ function App() {
       <div className='app'>
         <Routes>
           <Route path="/" element={<Home recipes={recipes} postRecipe={postRecipe} deleteRecipe={deleteRecipe}> </Home>} />
-          <Route path="/dishes/:id" element={<RecipeDetails />}/>
+          <Route path="/dishes/:id" element={<RecipeDetails editRecipe={editRecipe}/>}/>
         </Routes>
       </div>
     </Router>
